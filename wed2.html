@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Wedding Invitation</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fffaf5;
+      color: #333;
+      text-align: center;
+      padding: 40px;
+      position: relative;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      color: #c78585;
+    }
+
+    .names {
+      font-size: 2em;
+      margin-top: 10px;
+    }
+
+    .details {
+      margin-top: 30px;
+      font-size: 1.2em;
+      line-height: 1.6;
+    }
+
+    .footer {
+      margin-top: 50px;
+      font-size: 1em;
+      color: #888;
+    }
+
+    .lang-toggle {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      background-color: #c78585;
+      color: white;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .lang {
+      display: none;
+    }
+
+    .lang.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <button class="lang-toggle" onclick="toggleLang()">မြန်မာ / English</button>
+
+  <!-- English Version -->
+  <div class="lang en active">
+    <h1>You're Invited!</h1>
+    <div class="names">David & Yoon</div>
+    <div class="details">
+      <p>Join us as we celebrate our wedding</p>
+      <p><strong>Date:</strong> 2 August 2025</p>
+      <p><strong>Time:</strong> 9:00 AM</p>
+      <p><strong>Venue:</strong> Holy Innocent Church, South Dagon, Yangon</p>
+    </div>
+    <div class="footer">
+      We can't wait to celebrate with you!
+    </div>
+  </div>
+
+  <!-- Myanmar Version -->
+  <div class="lang mm">
+    <h1>လှိုက်လှဲစွာဖိတ်ခေါ်ပါတယ်။</h1>
+    <div class="names">ဒေးဗစ် နှင့် ယွန်း</div>
+    <div class="details">
+      <p>ကျွန်ုပ်တို့၏ မင်္ဂလာဆောင်ပွဲတွင် လာရောက်အားဖြည့်ပေးပါရန် ဖိတ်ခေါ်အပ်ပါသည်။</p>
+      <p><strong>နေ့ရက်:</strong> ၂၀၂၅ ဩ၈တ် ၂ ရက်</p>
+      <p><strong>အချိန်:</strong> မနက် ၉ နာရီ</p>
+      <p><strong>နေရာ:</strong> သန့်ရှင်းသောအြပစ်မဲ့ က‌လေးများဘုရားကျောင်း၊ တောင်၊ ရန်ကုန်</p>
+    </div>
+    <div class="footer">
+      သင်နှင့်အတူ ဝမ်းမြောက်ဖွယ်နေ့လေးကိုမျှဝေဖို့ စောင့်မျှော်နေပါတယ်။
+    </div>
+  </div>
+
+  <script>
+    function toggleLang() {
+      const langs = document.querySelectorAll('.lang');
+      langs.forEach(div => div.classList.toggle('active'));
+    }
+  </script>
+</body>
+</html>
